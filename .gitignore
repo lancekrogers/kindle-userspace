@@ -1,0 +1,16 @@
+.DS_Store
+*.log
+work/
+dist/
+*.tar.gz
+*.apk
+*.pem
+*.bin
+*.sig
+*.azw3
+*.azw
+authorized_keys
+id_rsa
+id_ed25519
+id_kindle*
+.obey/
