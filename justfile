@@ -16,6 +16,10 @@ pack-git:
 pack-vim:
     ./scripts/pack-musl-vim.sh
 
+# Public camp+fest linux/arm → work/fest-kindlehf.tar.gz
+pack-fest:
+    ./scripts/pack-fest.sh
+
 # Show what this repo is
 about:
     @echo "kindle-userspace — run your own programs on hardware you own"
@@ -31,6 +35,8 @@ check:
     test -x scripts/start-ssh.sh
     test -x scripts/ash-camp.sh
     test -x scripts/build-go.sh
+    test -x scripts/pack-fest.sh
+    test -x scripts/install-fest.sh
     test -f .gitignore
     grep -q '^work/$' .gitignore
     grep -q '\.azw3' .gitignore

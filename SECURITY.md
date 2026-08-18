@@ -12,6 +12,7 @@ jailbreak payloads stay out of it.
 - DRM strippers, DeDRM plugins, Kindle store book files
 - Unsigned `.bin` update packages (USBNetLite, MRPI, etc.)
 - Calibre debug dumps that list personal documents
+- Prebuilt `camp` / `fest` binaries (build them with `just pack-fest`)
 
 ## Do not merge from the private explore workitem
 

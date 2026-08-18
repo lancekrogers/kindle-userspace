@@ -11,3 +11,7 @@ git:
 # Alpine musl/armv7 vim → work/vim-kindlehf.tar.gz
 vim:
     {{ justfile_directory() }}/../scripts/pack-musl-vim.sh
+
+# Public camp+fest linux/arm → work/fest-kindlehf.tar.gz
+fest:
+    {{ justfile_directory() }}/../scripts/pack-fest.sh

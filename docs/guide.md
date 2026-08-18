@@ -229,28 +229,17 @@ Busybox `vi` stays `/bin/vi`. Real vim is `/mnt/us/bin/vim`. Runtime is
 `VIMRUNTIME=/mnt/us/opt/vim/share/vim/vim91`. Fine over SSH. kTerm
 works; e-ink will fight large redraws.
 
-## 7. camp / fest on busybox ash
+## 7. Festival (optional)
 
-`/bin/bash` on modern Kindles is often busybox. Official
-`camp shell-init bash` needs real bash (`complete`, `[[`, arrays). Put
-`scripts/ash-camp.sh` at `$HOME/.ash_camp` (`HOME` is `/mnt/us` when
-dropbear is started with `-H /mnt/us`) and source it from `.profile`:
+[Fest](https://github.com/Obedience-Corp/fest) is a separate public CLI.
+Do not vendor it into this tree. Build and install: [fest.md](fest.md).
 
-```sh
-. /mnt/us/.ash_camp
-export ENV=/mnt/us/.ash_camp
+```bash
+just pack-fest
 ```
 
-You get `camp go` / `fest go` changing directory in the current shell.
-Tab completion and Charm TUIs stay on the computer.
-
-`fest init` looks for templates in `$HOME/.obey/fest`. If that cache is
-missing it auto-syncs from GitHub, which needs the git HTTPS wrap
-above. Copying a cache onto the device lets `fest init` run offline.
-
-Build the binaries with `scripts/build-go.sh`. A `camp version` print
-from `/mnt/us/bin/camp` is enough to prove the pipe. Do not copy a
-whole Mac campaign onto 1 GB of RAM.
+Ash hooks live in `scripts/ash-camp.sh`. Official `camp shell-init bash`
+needs real bash; `/bin/bash` on the Kindle is busybox.
 
 ## Commands
 
@@ -258,6 +247,7 @@ whole Mac campaign onto 1 GB of RAM.
 just                  # list
 just pack-git         # work/git-kindlehf.tar.gz
 just pack-vim         # work/vim-kindlehf.tar.gz
+just pack-fest        # work/fest-kindlehf.tar.gz (optional)
 just check            # scripts executable, ignore rules present
 ```
 

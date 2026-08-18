@@ -15,6 +15,7 @@
 
 <p align="center">
   <a href="docs/guide.md">Guide</a> ·
+  <a href="docs/fest.md">Festival</a> ·
   <a href="docs/troubleshooting.md">Troubleshooting</a> ·
   <a href="LICENSE">MIT</a>
 </p>
@@ -44,10 +45,12 @@ This repo is the pipe that does not do those things.
 | `vim 9.1` | `just pack-vim` — same shape |
 | Your own CLI on the device | [`scripts/build-go.sh`](scripts/build-go.sh) → `linux/arm` `GOARM=7` |
 | Files onto `/mnt/us` | [`scripts/mtp-put-dir.py`](scripts/mtp-put-dir.py) via `calibre-debug` |
+| Optional: [fest](https://github.com/Obedience-Corp/fest) + camp | `just pack-fest` — public modules, not vendored here |
 
 ```bash
 just pack-git          # work/git-kindlehf.tar.gz
 just pack-vim          # work/vim-kindlehf.tar.gz
+just pack-fest         # work/fest-kindlehf.tar.gz  (optional)
 ./scripts/build-go.sh ./myapp-kindlehf ./cmd/myapp
 ```
 
@@ -74,6 +77,7 @@ Host kindle
 | | |
 |--|--|
 | [Guide](docs/guide.md) | Build, MTP, scriptlets, SSH, git, vim, ash hooks |
+| [Festival](docs/fest.md) | Optional `fest`/`camp` on the device. TUI stays on the computer. |
 | [Troubleshooting](docs/troubleshooting.md) | Connection refused, host-key rotate, FAT, KUAL is dead |
 | [SECURITY](SECURITY.md) | What never goes in this tree |
 
