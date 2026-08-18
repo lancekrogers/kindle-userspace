@@ -15,18 +15,29 @@
 
 <p align="center">
   <a href="docs/guide.md">Guide</a> ·
+  <a href="docs/faq.md">FAQ</a> ·
   <a href="docs/fest.md">Festival</a> ·
   <a href="docs/troubleshooting.md">Troubleshooting</a> ·
   <a href="LICENSE">MIT</a>
 </p>
 
-A Kindle is a Linux box Amazon sells as a storefront. After a public
-jailbreak you already own `/mnt/us`. This repo is the missing userspace:
-drop your own programs, get a shell over Wi-Fi, and run real git and vim
+SSH, git, and vim on a jailbroken **Kindle Scribe** (and other
+**kindlehf** Kindles). After **Véra** you already own `/mnt/us`. This
+repo is the missing userspace: drop your own `linux/arm` programs, open
+a **Wi-Fi SSH** shell with USBNetLite dropbear, and run real git and vim
 on a FAT volume that refuses every symlink Alpine throws at it.
 
 **Not a jailbreak.** Bring your own Véra. No hotfix books, no firmware
-dumps, no DRM tools.
+dumps, no DRM tools. **KUAL is dead** on ≥ 5.19.4; use **KPM**.
+
+## Works on
+
+- First-gen Kindle Scribe on firmware **5.19.5** (the unit this was
+  written against)
+- Other **kindlehf** devices, firmware ≥ 5.16.3
+- After a public jailbreak (Véra covers 5.17.1–5.19.6)
+- [USBNetLite](https://github.com/notmarek/kindle-usbnetlite) khf for
+  SSH. Do not use Toggle USBNet.
 
 ## Why people brick this
 
@@ -77,6 +88,7 @@ Host kindle
 | | |
 |--|--|
 | [Guide](docs/guide.md) | Build, MTP, scriptlets, SSH, git, vim, ash hooks |
+| [FAQ](docs/faq.md) | Kindle Scribe SSH, 5.19.5, KUAL vs KPM, git on FAT |
 | [Festival](docs/fest.md) | Optional `fest`/`camp` on the device. TUI stays on the computer. |
 | [Troubleshooting](docs/troubleshooting.md) | Connection refused, host-key rotate, FAT, KUAL is dead |
 | [SECURITY](SECURITY.md) | What never goes in this tree |

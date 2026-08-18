@@ -19,7 +19,7 @@ Works over SSH, after git is installed:
 Leave on the computer:
 
 - `fest create` and the other Bubbletea wizards (e-ink will fight them)
-- A full Mac campaign. 1 GB RAM. Do not copy My_Tools.
+- A full Mac campaign. 1 GB RAM. Do not copy one.
 
 Fest without [camp](https://github.com/Obedience-Corp/camp) is half a
 product. The build script emits both.

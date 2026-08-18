@@ -1,7 +1,8 @@
-# Guide
+# Kindle Scribe userspace guide
 
 Amazon still boots the Kindle. After a public jailbreak you can still run
-your own programs on the userstore.
+your own programs on the userstore. SSH over Wi-Fi, git and vim on FAT
+`/mnt/us`, no Toggle USBNet.
 
 This is the full pipe. The [README](../README.md) is the landing page.
 

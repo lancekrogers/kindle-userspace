@@ -1,4 +1,7 @@
-# Troubleshooting
+# Kindle troubleshooting
+
+USBNet page, SSH connection refused, git on FAT, KUAL vs KPM. Longer
+answers are in the [FAQ](faq.md).
 
 | What you see | What it is |
 |--------------|------------|

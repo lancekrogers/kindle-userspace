@@ -14,21 +14,11 @@ jailbreak payloads stay out of it.
 - Calibre debug dumps that list personal documents
 - Prebuilt `camp` / `fest` binaries (build them with `just pack-fest`)
 
-## Do not merge from the private explore workitem
+## Pull requests
 
-The campaign lab notebook is a different tree. Do not copy it here. If a
-script from the lab is useful, rewrite it so it has no host paths, no
-serials, and no payloads, then add that rewrite.
-
-## Flip to public
-
-1. `gh repo view --json isPrivate` still says true until you flip it.
-2. `git grep -E 'G0[0-9]|BEGIN (OPENSSH|RSA)|authorized_keys|1949:|/etc/uks'`
-   and read the hits. Serials and keys are the usual leaks.
-3. Confirm `work/`, `*.tar.gz`, `*.apk`, `*.bin`, `*.pem` are gitignored and
-   untracked.
-4. README still says this is not a jailbreak kit.
-5. Then `gh repo edit --visibility public`.
+Do not send device serials, keys, jailbreak books, firmware dumps, or
+lab IPs. If a script from a private notebook is useful, rewrite it so it
+has no host paths and no payloads.
 
 ## Scope
 
